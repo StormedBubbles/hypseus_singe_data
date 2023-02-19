@@ -326,8 +326,8 @@ sprNUM[9] = spriteLoad(MYDIR .. "num9.png")
 
 resX = overlayGetWidth() 
 resY = overlayGetHeight() 
-UnX = resX/1584
-UnY = resY/1080
+UnX = resX/vldpGetWidth()
+UnY = resY/vldpGetHeight()
 meanx = 0
 meany = 0
 cx = 0
@@ -382,8 +382,8 @@ elseif (dip_Crosshair == 5) then
 
 end
 
-cursoroffsetx = 53*UnX
-cursoroffsety = 40*UnY
+cursoroffsetx = spriteGetWidth(sprCursor) * 0.5
+cursoroffsety = spriteGetHeight(sprCursor) * 0.5
 
 
 -- xratio and yratio declaration --
