@@ -344,8 +344,8 @@ iALG = math.random(3)
 
 resX = overlayGetWidth() 
 resY = overlayGetHeight() 
-UnX = resX/1440
-UnY = resY/1080
+UnX = resX/vldpGetWidth()
+UnY = resY/vldpGetHeight()
 
 
 font42   = fontLoad(MYDIR .. "default.ttf", 42*UnX)
@@ -422,8 +422,8 @@ elseif (dip_Crosshair == 5) then
 
 end
 
-cursoroffsetx = 53*UnX
-cursoroffsety = 47*UnY
+cursoroffsetx = spriteGetWidth(sprCursor) * 0.5
+cursoroffsety = spriteGetHeight(sprCursor) * 0.5
 
 
 -- xratio and yratio declaration --
